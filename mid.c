@@ -1,7 +1,39 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <math.h>
 
-int main(){
-    int newArray[]={0,2,3,4,2};
-    printf("%d",sizeof(newArray)/sizeof(newArray[0]));
-    return;
+int binarySearch(int[], int, int);
+
+int main()
+{
+    int myList[] = {1, 3, 5, 7, 9};
+    int len = sizeof(myList) / sizeof(myList[0]);
+
+    printf("%d\n", binarySearch(myList, 3, len));  // 1
+    printf("%d\n", binarySearch(myList, -1, len)); //-1
+    return 0;
+}
+
+int binarySearch(int list[], int item, int len)
+{
+    int low = 0;
+    int high = len;
+    while (low <= high)
+    {
+        int mid = floor((low + high) / 2); //math.h floor
+        int guess = list[mid];
+
+        if (guess == item)
+        {
+            return mid;
+        }
+        else if (guess > item)
+        {
+            high = mid - 1;
+        }
+        else
+        {
+            low = mid + 1;
+        }
+    }
+    return -1; //number not find
 }
