@@ -3,35 +3,36 @@
 
 using namespace std;
 
-<<<<<<< HEAD
-
+class hax
+{
+    int low=0;
+    int high=0;
+    int mid=0;
+    int guess=0;
+    public:
+    int testFunction(int array[],int num){
+        high=sizeof(array)/sizeof(array[0]);
+        while(low<=high){
+            mid=(low+high)/2;
+            guess=array[mid];
+            if(guess==num){
+                return mid;
+            }
+            else if(guess>num)
+            {
+                high--;
+            }
+            else if(guess<num)
+            {
+                low++;
+            }
+            return 0;   
+        }
+    }
+};
 int main(){
-    vector<int> obj;
-    for(int i = 0; i < 10; i++)
-    {
-        obj.push_back(i);
-    }
-    
-    vector<int>::iterator it;
-    for(it=obj.begin();it!=obj.end();it++){
-        cout<<*it<<endl;
-    }
-    for(int i = 0; i < 10; i++)
-    {
-        obj.pop_back();
-    }
-    
-    for(it=obj.begin();it!=obj.end();it++){
-        cout<<*it<<endl;
-        cout<<"no nums";
-    }
-    
-
+    int testArray[]={10,223,244,6666,432};
+    hax test1;
+    cout<<"finding number 6666"<<test1.testFunction(testArray,6666);
+    return;
 }
-=======
-int main(){
-    vector<double> nums;
-    nums.push_back(1221);
-
-}
->>>>>>> parent of aa3b8ea... Update test.cpp
