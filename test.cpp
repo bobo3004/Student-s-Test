@@ -1,8 +1,9 @@
 #include<iostream>
 #include<vector>
-#include<math.h>
+
 using namespace std;
 
+<<<<<<< HEAD
 
 int main(){
     vector<int> obj;
@@ -27,3 +28,10 @@ int main(){
     
 
 }
+=======
+int main(){
+    vector<double> nums;
+    nums.push_back(1221);
+
+}
+>>>>>>> parent of aa3b8ea... Update test.cpp
